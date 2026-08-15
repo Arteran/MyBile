@@ -1,0 +1,37 @@
+.header {
+  background-image: url('../images/header-bg-mobile.png.png');
+  background-size: cover;
+  background-position: 88% center;
+
+  &__content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1.5px;
+    color: white;
+  }
+
+  &__bottom {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1.5px;
+    padding-bottom: 88px;
+
+    @include onTable {
+      padding-bottom: 130px;
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+}

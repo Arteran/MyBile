@@ -1,0 +1,43 @@
+.about-us {
+  @include pageGrid;
+
+  &__title {
+    grid-column: 1 / -1;
+
+    @include onTable {
+      grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: span 5;
+    }
+  }
+
+  &__content {
+    grid-column: 1 / -1;
+
+    @include onTable {
+      grid-column: span 3;
+    }
+
+    @include onDesktop {
+      grid-column: span 6;
+    }
+
+    margin: 0;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 32.2px;
+  }
+
+  // --needed-gap: 92px;
+  // margin-bottom: calc(var(--needed-gap) - #{$section-gap});
+  // @include onTable{
+  //   --needed-gap:132px;
+  // }
+  // @include onDesktop{
+  //   --needed-gap:164px;
+  // }
+
+  @include addGap(92px, 132px, 164px);
+}

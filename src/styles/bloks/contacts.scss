@@ -1,0 +1,67 @@
+.contacts {
+  &__content {
+    @include pageGrid;
+
+    &--left {
+      grid-column: 1 / -1;
+
+      @include onTable {
+        grid-column: 1 / 4;
+      }
+
+      @include onDesktop {
+        grid-column: 1 / 6;
+      }
+    }
+
+    &--right {
+      grid-column: 1 / -1;
+
+      @include onTable {
+        grid-column: 4 / 7;
+      }
+
+      @include onDesktop {
+        grid-column: 8 / 11;
+      }
+    }
+
+    &--button {
+      width: 100%;
+      margin-bottom: 48px;
+    }
+
+    &--text {
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+    }
+
+    &--information {
+      margin-bottom: 24px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;
+    }
+  }
+
+  &__input {
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    border-radius: 40px;
+    width: calc(100% - 32px);
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #292929;
+
+    &--message {
+      resize: vertical;
+      margin-bottom: 32px;
+    }
+  }
+}

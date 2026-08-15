@@ -1,0 +1,17 @@
+.main {
+  padding: 60px 0 120px;
+
+  @include onTable {
+    padding-top: 120px;
+    padding-bottom: 102px;
+  }
+
+  @include onDesktop {
+    padding-bottom: 164px;
+  }
+
+  &__content {
+    display: grid;
+    row-gap: $section-gap;
+  }
+}
