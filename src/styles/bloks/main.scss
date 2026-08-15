@@ -1,4 +1,7 @@
 .main {
+  position: relative;
+  z-index: 1;
+  background-color: black;
   padding: 60px 0 120px;
 
   @include onTable {
