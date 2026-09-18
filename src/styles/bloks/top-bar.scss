@@ -11,14 +11,18 @@
 
   &__img {
     display: flex;
-    height: 38px;
+    height: 48px;
+
+    @include onTable {
+      height: 56px;
+    }
 
     @include hover(transform, scale(1.2));
   }
 
   &__icons {
     display: flex;
-    gap: 24px;
+    gap: 32px;
   }
 
   &--sticky {
@@ -30,20 +34,38 @@
 
   &__phone-number {
     display: none;
-    margin-right: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 32px;
-    letter-spacing: 2px;
-    color: #fff;
-    text-decoration: none;
+
+    @include onDesktop {
+      display: block;
+      margin-right: 0;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: 2px;
+      color: #fff;
+      text-decoration: none;
+
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      transition:
+        max-width 0.4s ease,
+        opacity 0.3s ease,
+        margin-right 0.4s ease;
+    }
   }
 
   &__phone {
     display: flex;
+    align-items: center;
 
-    &:hover .top-bar__phone-number {
-      display: block;
+    @include onDesktop {
+      &:hover .top-bar__phone-number {
+        max-width: 300px;
+        opacity: 1;
+        margin-right: 20px;
+      }
     }
   }
 }
