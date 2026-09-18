@@ -51,13 +51,13 @@
 }
 
 @mixin addGap($mobile, $table, $desctop) {
-  margin-bottom: calc($mobile - #{$section-gap});
+  margin-bottom: $mobile;
 
   @include onTable {
-    margin-bottom: calc($table - #{$section-gap});
+    margin-bottom: $table;
   }
 
   @include onDesktop {
-    margin-bottom: calc($desctop - #{$section-gap});
+    margin-bottom: $desctop;
   }
 }

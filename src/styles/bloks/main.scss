@@ -14,7 +14,16 @@
   }
 
   &__content {
-    display: grid;
-    row-gap: $section-gap;
+    display: flex;
+    flex-direction: column;
+    row-gap: 88px;
+
+    @include onTable {
+      row-gap: 120px;
+    }
+
+    @include onDesktop {
+      row-gap: 160px;
+    }
   }
 }
